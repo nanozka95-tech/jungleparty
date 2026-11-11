@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#087f55">
+<title>Jungle Birthday Party | You're Invited!</title>
+<style>
+:root{--green:#087f55;--lime:#c9f05b;--yellow:#ffdf45;--pink:#ff5c9a;--orange:#ff8a35;--blue:#54d9ed;--purple:#8b69ee;--cream:#fff9e8}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Trebuchet MS",system-ui,sans-serif;color:#173c32;background:#fff4d6;overflow-x:hidden}
+button{font:inherit}
+.hero{min-height:100svh;position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:34px 18px 56px;background:radial-gradient(circle at 15% 15%,#e7ff83 0 7%,transparent 8%),radial-gradient(circle at 88% 19%,#ffd65e 0 6%,transparent 7%),linear-gradient(160deg,#27c58a 0%,#08a978 46%,#087f65 100%)}
+.hero:before,.hero:after{content:"";position:absolute;z-index:-1;width:50vw;height:50vw;max-width:650px;max-height:650px;border-radius:50%;background:#b9ec47;opacity:.2;filter:blur(2px)}
+.hero:before{left:-20vw;top:-20vw}.hero:after{right:-23vw;bottom:-27vw;background:#ffcf4b}
+.leaf{position:absolute;font-size:clamp(38px,8vw,90px);opacity:.8;filter:drop-shadow(0 7px 2px #005b4833);animation:sway 4s ease-in-out infinite;pointer-events:none}
+.l1{left:2%;top:8%;transform:rotate(-25deg)}.l2{right:3%;top:10%;animation-delay:-2s}.l3{left:4%;bottom:8%;animation-delay:-1s}.l4{right:5%;bottom:5%;animation-delay:-3s}
+@keyframes sway{50%{translate:0 -12px;rotate:8deg}}
+.confetti{position:absolute;inset:0;pointer-events:none;opacity:.8;background-image:radial-gradient(circle,#ff5c9a 2px,transparent 3px),radial-gradient(circle,#ffdf45 3px,transparent 4px),radial-gradient(circle,#54d9ed 2px,transparent 3px);background-size:83px 91px,117px 123px,151px 133px;background-position:10px 20px,48px 33px,70px 10px}
+.hero-inner{width:min(1120px,100%);text-align:center;position:relative;z-index:2}
+.kicker{display:inline-block;background:var(--yellow);color:#633e00;font-weight:1000;letter-spacing:.14em;padding:10px 20px;border:3px solid #fff;border-radius:999px;box-shadow:0 6px 0 #b36b18;transform:rotate(-2deg);font-size:clamp(12px,2vw,16px)}
+h1{margin:20px 0 8px;color:#fff;text-transform:uppercase;font-weight:1000;line-height:.9;letter-spacing:-.055em;text-shadow:0 5px 0 #08714e,0 10px 0 #075b46,4px 13px 0 #064b3d;font-size:clamp(48px,9.5vw,112px)}
+h1 span{display:block;color:#ffe34e;font-size:.62em;letter-spacing:.01em;margin-top:13px;text-shadow:0 4px 0 #c56a19,0 8px 0 #8a4d16}
+.tagline{color:#fff;font-weight:900;font-size:clamp(17px,3vw,27px);text-shadow:0 2px 3px #005b48;margin:18px 0 0}
+.animal-stage{display:flex;align-items:end;justify-content:center;gap:clamp(0px,1.5vw,18px);margin:10px auto -4px;max-width:950px;filter:drop-shadow(0 12px 6px #004b3a44)}
+.animal{width:clamp(76px,15vw,160px);height:auto;overflow:visible;animation:bob 3s ease-in-out infinite;transform-origin:50% 100%}
+.animal:nth-child(2){animation-delay:-.7s}.animal:nth-child(3){animation-delay:-1.4s}.animal:nth-child(4){animation-delay:-2.1s}.animal:nth-child(5){animation-delay:-.35s}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(2deg)}}
+.music-control{margin:20px auto 16px;text-align:center}
+.music-btn{border:4px solid #fff;border-radius:999px;padding:13px 22px;background:linear-gradient(135deg,#ffe34e,#ffad38);color:#65400a;font-weight:1000;letter-spacing:.04em;box-shadow:0 6px 0 #b66a1e,0 10px 18px #003d3040;cursor:pointer;transition:transform .18s}
+.music-btn:hover{transform:translateY(-2px)}
+.music-btn:focus-visible{outline:4px solid #fff;outline-offset:4px}
+.music-control p{margin:10px 0 0;color:#f3ffcf;font-weight:800;text-shadow:0 2px 3px #005b48;font-size:13px}
+.invite-card{position:relative;margin:0 auto;width:min(760px,100%);padding:25px clamp(17px,4vw,38px) 28px;background:var(--cream);border:5px solid #fff;border-radius:30px;box-shadow:0 12px 0 #075f49,0 20px 35px #003d3044}
+.invite-card:before{content:"🎈  🎁  🎈";display:block;font-size:clamp(22px,4vw,34px);margin-bottom:7px}
+.invite-card h2{font-size:clamp(25px,5vw,42px);line-height:1;margin:0 0 12px;color:#f05283;text-transform:uppercase}
+.invite-copy{font-size:clamp(15px,2.2vw,19px);line-height:1.5;font-weight:700;margin:0 auto 20px;max-width:600px}
+.details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;text-align:left}
+.detail{padding:13px 15px;border-radius:17px;font-weight:900;display:flex;align-items:center;gap:10px;min-height:62px;box-shadow:inset 0 -4px #0000000d}
+.detail:nth-child(1){background:#ffdf65}.detail:nth-child(2){background:#ffb4d0}.detail:nth-child(3){background:#a8eddf}.detail:nth-child(4){background:#b9e9ff}.detail:nth-child(5){background:#d9c9ff;grid-column:1/-1;justify-content:center}
+.detail .emoji{font-size:25px}.detail small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.65;margin-bottom:2px}
+.cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;margin-top:22px;padding:16px 30px;background:linear-gradient(135deg,#ff5c9a,#ff8a35);color:white;text-decoration:none;font-weight:1000;letter-spacing:.04em;border:4px solid white;border-radius:999px;box-shadow:0 7px 0 #bd4b36,0 10px 18px #a53d3333;transition:transform .18s,box-shadow .18s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 10px 0 #bd4b36,0 13px 20px #a53d3333}
+.footer-note{margin:19px 0 0;color:#fff;font-size:clamp(15px,2vw,19px);font-weight:900;text-shadow:0 2px 3px #005b48}
+.scroll-hint{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);color:#eaffc7;font-size:12px;font-weight:800;letter-spacing:.12em}
+.bottom{background:#fff2c9;padding:38px 18px 48px;text-align:center;position:relative}
+.bottom h2{font-size:clamp(27px,5vw,44px);color:#087f55;margin:0 0 8px}
+.bottom p{font-weight:700;font-size:17px;margin:0;color:#4d655b}
+.badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px}
+.badges span{background:#fff;border:2px dashed #f5a53c;border-radius:999px;padding:9px 15px;font-weight:900;color:#4e6758}
+footer{text-align:center;background:#087f55;color:#eaffc7;padding:16px;font-size:12px;font-weight:800;letter-spacing:.08em}
+@media(max-width:520px){.details{grid-template-columns:1fr}.detail:nth-child(5){grid-column:auto}.animal-stage{gap:0;margin-top:22px}.animal{width:19vw}.invite-card{padding:21px 15px 24px}.hero{padding-top:42px;padding-bottom:55px}.leaf{font-size:40px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<section class="hero" id="top">
+  <div class="confetti"></div>
+  <div class="leaf l1">🌿</div><div class="leaf l2">🍃</div><div class="leaf l3">🌴</div><div class="leaf l4">🌿</div>
+  <div class="hero-inner">
+    <div class="kicker">YOU ARE OFFICIALLY INVITED!</div>
+    <h1>You're invited!<span>Jungle Birthday Party</span></h1>
+    <p class="tagline">You are officially invited to the Jungle Birthday party<br>organised by Nargizakhan Shaumarova!</p>
+    <div class="animal-stage" aria-label="Friendly jungle animals">
+      <!-- Lion -->
+      <svg class="animal" viewBox="0 0 150 150" role="img" aria-label="Cute lion">
+        <path d="M75 9C39 4 14 31 15 70c-1 36 25 65 60 68 35-3 61-32 60-68C136 31 111 4 75 9Z" fill="#d96d25" stroke="#8d421d" stroke-width="4"/>
+        <path d="M75 23c-26 0-45 20-45 48s19 49 45 49 45-21 45-49S101 23 75 23Z" fill="#ffc85b" stroke="#a95d24" stroke-width="3"/>
+        <path d="M49 67q-10-13-18 0M101 67q10-13 18 0" fill="none" stroke="#633b28" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="58" cy="69" rx="5" ry="7" fill="#3a3029"/><ellipse cx="92" cy="69" rx="5" ry="7" fill="#3a3029"/>
+        <ellipse cx="75" cy="88" rx="18" ry="13" fill="#fff0cf"/><path d="M69 84q6-8 12 0-6 8-12 0" fill="#58352a"/>
+        <path d="M75 92q-2 12-12 11m12-11q2 12 12 11" fill="none" stroke="#58352a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M58 22l-2-13 12 8 8-12 8 12 13-8-3 15" fill="#ffdf45" stroke="#a95d24" stroke-width="3"/>
+      </svg>
+      <!-- Elephant -->
+      <svg class="animal" viewBox="0 0 150 150" role="img" aria-label="Cute elephant">
+        <path d="M35 59Q4 37 12 77q5 24 28 17M115 59q31-22 23 18-5 24-28 17" fill="#9bd5e9" stroke="#397f9a" stroke-width="4"/>
+        <ellipse cx="75" cy="76" rx="48" ry="49" fill="#9bd5e9" stroke="#397f9a" stroke-width="4"/>
+        <path d="M65 88q-2 39 17 40 18 0 12-26" fill="#9bd5e9" stroke="#397f9a" stroke-width="12" stroke-linecap="round"/>
+        <ellipse cx="58" cy="68" rx="5" ry="7" fill="#263c45"/><ellipse cx="94" cy="68" rx="5" ry="7" fill="#263c45"/>
+        <path d="M67 94q9 9 18 0" fill="none" stroke="#397f9a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M56 108l-5 17m45-17 5 17" stroke="#397f9a" stroke-width="8" stroke-linecap="round"/>
+        <circle cx="40" cy="86" r="8" fill="#ff9eb8"/><circle cx="110" cy="86" r="8" fill="#ff9eb8"/>
+      </svg>
+      <!-- Giraffe -->
+      <svg class="animal" viewBox="0 0 150 150" role="img" aria-label="Cute giraffe">
+        <path d="M56 145V66q0-35 22-35t22 35v79" fill="#ffc94f" stroke="#a66b20" stroke-width="4"/>
+        <path d="M55 48q-13-20-4-29m48 29q13-20 4-29" fill="none" stroke="#a66b20" stroke-width="5" stroke-linecap="round"/>
+        <ellipse cx="78" cy="34" rx="29" ry="30" fill="#ffc94f" stroke="#a66b20" stroke-width="4"/>
+        <path d="M58 17l-5-12 12 5m32 7 5-12-12 5" fill="#ffc94f" stroke="#a66b20" stroke-width="3"/>
+        <ellipse cx="67" cy="32" rx="4" ry="6" fill="#3c3328"/><ellipse cx="89" cy="32" rx="4" ry="6" fill="#3c3328"/>
+        <path d="M69 47q9 8 18 0" fill="none" stroke="#8e5422" stroke-width="3" stroke-linecap="round"/>
+        <path d="M61 65l13-8 9 12-11 9Zm20 32 13-8 8 12-11 8Zm-22 23 12-8 8 11-11 9Z" fill="#b66b2a"/>
+        <path d="M56 143v5m43-5v5" stroke="#a66b20" stroke-width="6"/>
+      </svg>
+      <!-- Monkey -->
+      <svg class="animal" viewBox="0 0 150 150" role="img" aria-label="Cute monkey">
+        <path d="M111 96q36-4 23 29-8 17-26 8" fill="none" stroke="#8b4b2c" stroke-width="9" stroke-linecap="round"/>
+        <circle cx="75" cy="76" r="51" fill="#9b5a35" stroke="#63391f" stroke-width="4"/>
+        <circle cx="26" cy="74" r="17" fill="#c47a4d" stroke="#63391f" stroke-width="4"/><circle cx="124" cy="74" r="17" fill="#c47a4d" stroke="#63391f" stroke-width="4"/>
+        <ellipse cx="75" cy="88" rx="32" ry="29" fill="#f7c58c"/>
+        <ellipse cx="60" cy="66" rx="5" ry="7" fill="#2c2823"/><ellipse cx="90" cy="66" rx="5" ry="7" fill="#2c2823"/>
+        <ellipse cx="75" cy="83" rx="7" ry="5" fill="#57301f"/>
+        <path d="M65 98q10 12 20 0" fill="none" stroke="#743b2a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M56 122l-6 17m44-17 6 17" stroke="#63391f" stroke-width="9" stroke-linecap="round"/>
+        <path d="M57 21q18-18 37 0" fill="none" stroke="#ffdf45" stroke-width="8" stroke-linecap="round"/>
+      </svg>
+      <!-- Zebra -->
+      <svg class="animal" viewBox="0 0 150 150" role="img" aria-label="Cute zebra">
+        <ellipse cx="75" cy="83" rx="48" ry="48" fill="#fff" stroke="#30343b" stroke-width="4"/>
+        <path d="M47 43l18 8-17 15 19 7-19 16 16 8-17 18M103 43L85 51l17 15-19 7 19 16-16 8 17 18" fill="none" stroke="#30343b" stroke-width="8"/>
+        <path d="M55 47q-7-29 20-31 27 2 20 31" fill="#fff" stroke="#30343b" stroke-width="4"/>
+        <path d="M58 21L47 7l-2 22m47-8L104 7l2 22" fill="#fff" stroke="#30343b" stroke-width="4"/>
+        <ellipse cx="65" cy="52" rx="4" ry="6" fill="#30343b"/><ellipse cx="86" cy="52" rx="4" ry="6" fill="#30343b"/>
+        <ellipse cx="75" cy="69" rx="14" ry="10" fill="#f7b2b5"/><path d="M69 82q6 7 12 0" fill="none" stroke="#30343b" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="music-control">
+      <button id="musicBtn" class="music-btn" type="button" aria-pressed="false">
+        <span id="musicIcon">▶</span> <span id="musicLabel">PLAY THE JUNGLE PARTY SONG</span>
+      </button>
+      <p>Our official party song: “I Like To Move It” 🎵</p>
+      <audio id="partySong" preload="metadata" loop>
+        <source src="./jungle-party-song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+    <div class="invite-card">
+      <h2>Let's learn, play & celebrate!</h2>
+      <p class="invite-copy">Join our little explorers for a fun-filled English open lesson as we discover wild animals, play, learn and celebrate together!</p>
+      <div class="details">
+        <div class="detail"><span class="emoji">📅</span><span><small>Date</small>Friday, 13 November 2026</span></div>
+        <div class="detail"><span class="emoji">⏰</span><span><small>Time</small>9:50 AM</span></div>
+        <div class="detail"><span class="emoji">🎒</span><span><small>Class</small>Class 1C</span></div>
+        <div class="detail"><span class="emoji">🏫</span><span><small>Building</small>Pre-school Building</span></div>
+        <div class="detail"><span class="emoji">🚪</span><span><small>Room</small>Room 308</span></div>
+      </div>
+      <a class="cta" href="#party">JOIN THE PARTY! <span aria-hidden="true">🎉</span></a>
+    </div>
+    <p class="footer-note">We can't wait to see you! 💚</p>
+  </div>
+  <div class="scroll-hint">SCROLL FOR THE PARTY VIBE ↓</div>
+</section>
+<section class="bottom" id="party">
+  <h2>Ready?</h2>
+  <p>Get ready to move, dance and celebrate at our Jungle Birthday Party!</p>
+  <div class="badges"><span>🦁 Meet wild animals</span><span>🎨 Create & imagine</span><span>🎈 Learn & celebrate</span></div>
+</section>
+</main>
+<footer>JUNGLE BIRTHDAY PARTY · GRADE 1C · ENGLISH OPEN LESSON</footer>
+<script>
+(() => {
+  const button = document.getElementById('musicBtn');
+  const icon = document.getElementById('musicIcon');
+  const label = document.getElementById('musicLabel');
+  const audio = document.getElementById('partySong');
+
+  async function playSong() {
+    try {
+      await audio.play();
+      icon.textContent = 'Ⅱ';
+      label.textContent = 'PAUSE THE PARTY SONG';
+      button.setAttribute('aria-pressed', 'true');
+    } catch (error) {
+      label.textContent = 'TAP TO PLAY THE PARTY SONG';
+    }
+  }
+
+  function pauseSong() {
+    audio.pause();
+    icon.textContent = '▶';
+    label.textContent = 'PLAY THE JUNGLE PARTY SONG';
+    button.setAttribute('aria-pressed', 'false');
+  }
+
+  button.addEventListener('click', () => {
+    if (audio.paused) playSong();
+    else pauseSong();
+  });
+
+  audio.addEventListener('ended', pauseSong);
+})();
+</script>
+</body>
+</html>
